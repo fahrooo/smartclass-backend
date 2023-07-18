@@ -66,6 +66,7 @@ import {
   deleteBooking,
   getBooking,
   getBookingbyId,
+  getPerangkatKelasBySchedule,
   postBooking,
   putBooking,
   rejectBooking,
@@ -172,6 +173,11 @@ router.delete("/booking/delete/:id", verifyToken, deleteBooking);
 router.post("/schedulekelas", verifyToken, scheduleKelas);
 router.post("/booking/reject", verifyToken, rejectBooking);
 router.post("/schedulebooking", verifyToken, scheduleBooking);
+router.post(
+  "/getperangkatkelasbyschedule",
+  verifyToken,
+  getPerangkatKelasBySchedule
+);
 
 //CRUD Members
 router.post("/member", verifyToken, getMember);
